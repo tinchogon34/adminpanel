@@ -58,7 +58,7 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 
-development:
+production:
   adapter: sqlite3
   database: adminpanel_production
   pool: 5
