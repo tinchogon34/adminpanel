@@ -1,0 +1,7 @@
+es:
+  attributes:
+    created_at: "Creado"
+    updated_at: "Actualizado"
+
+  activerecord:
+    models:

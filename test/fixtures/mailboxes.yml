@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: MyString
+  password: MyString
+  name: MyString
+  maildir: MyString
+  quota: 1
+  local_part: MyString
+  domain: MyString
+  created: 2014-06-13 10:28:10
+  modified: 2014-06-13 10:28:10
+  active: false
+
+two:
+  username: MyString
+  password: MyString
+  name: MyString
+  maildir: MyString
+  quota: 1
+  local_part: MyString
+  domain: MyString
+  created: 2014-06-13 10:28:10
+  modified: 2014-06-13 10:28:10
+  active: false

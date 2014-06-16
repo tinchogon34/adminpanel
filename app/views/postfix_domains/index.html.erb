@@ -1,0 +1,25 @@
+<h1>
+  Dominios
+  <%= link_to 'Crear Dominio', new_domain_path, class: "btn btn-primary pull-right" %>
+</h1>
+<hr />
+<%= grid(@domains) do |g|
+  
+  g.column name: "Dominio", attribute: "domain"
+  g.column name: "Descripción", attribute: "description"
+  g.column name: "Alias", attribute: "aliases"
+  g.column name: "Casillas", attribute: "mailboxes"
+  g.column name: "Activo", attribute: "active"
+  
+  g.column do |c|
+    link_to 'Ver Casillas', domain_mailboxes_path(c), class: 'btn btn-primary'
+  end
+
+  g.column do |c|
+    link_to "<span class='glyphicon glyphicon-pencil'></span>".html_safe, edit_domain_path(c)
+  end
+
+  g.column do |c|
+   link_to("<span class='glyphicon glyphicon-remove'></a>".html_safe, domain_path(c), method: :delete, data: {confirm: "Seguro desea eliminar?"})
+  end
+end -%>

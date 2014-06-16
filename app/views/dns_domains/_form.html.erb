@@ -1,0 +1,8 @@
+<%= simple_form_for(@zone, html: {class: 'form-horizontal' }, url: (@zone.try(:new_record?) ? new_zone_path : edit_zone_path(@zone))) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+
+  <%= f.input :name %>
+  <%= f.input :master %>
+  <%= f.input :type, collection: DnsDomain::DNS_TYPES, include_blank: false %>
+  <%= f.button :submit, class: "btn btn-success" %>
+<% end %>

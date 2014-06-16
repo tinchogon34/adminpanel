@@ -1,0 +1,24 @@
+<h1>
+  Zonas
+  <%= link_to 'Crear Zona', new_zone_path, class: "btn btn-primary pull-right" %>
+</h1>
+<hr />
+<%= grid(@zones) do |g|
+  
+  g.column name: "Nombre", attribute: "name"
+  g.column name: "Tipo", attribute: "type", custom_filter: :auto
+  g.column name: "Maestro", attribute: "master"
+  g.column name: "Ultimo chequeo", attribute: "last_check"
+  
+  g.column do |c|
+    link_to 'Ver registros', zone_records_path(c), class: 'btn btn-primary'
+  end
+
+  g.column do |c|
+    link_to "<span class='glyphicon glyphicon-pencil'></span>".html_safe, edit_zone_path(c)
+  end
+
+  g.column do |c|
+   link_to("<span class='glyphicon glyphicon-remove'></a>".html_safe, zone_path(c), method: :delete, data: {confirm: "Seguro desea eliminar?"})
+  end
+end -%>

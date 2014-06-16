@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @mailbox.username %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @mailbox.password %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @mailbox.name %>
+</p>
+
+<p>
+  <strong>Maildir:</strong>
+  <%= @mailbox.maildir %>
+</p>
+
+<p>
+  <strong>Quota:</strong>
+  <%= @mailbox.quota %>
+</p>
+
+<p>
+  <strong>Local part:</strong>
+  <%= @mailbox.local_part %>
+</p>
+
+<p>
+  <strong>Domain:</strong>
+  <%= @mailbox.domain %>
+</p>
+
+<p>
+  <strong>Created:</strong>
+  <%= @mailbox.created %>
+</p>
+
+<p>
+  <strong>Modified:</strong>
+  <%= @mailbox.modified %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @mailbox.active %>
+</p>
+
+<%= link_to 'Edit', edit_mailbox_path(@mailbox) %> |
+<%= link_to 'Back', mailboxes_path %>

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  domain: MyString
+  description: MyString
+  aliases: 1
+  mailboxes: 1
+  maxquota: 1
+  quota: 1
+  transport: MyString
+  backupmx: false
+  created: 2014-06-13 10:47:00
+  modified: 2014-06-13 10:47:00
+  active: false
+
+two:
+  domain: MyString
+  description: MyString
+  aliases: 1
+  mailboxes: 1
+  maxquota: 1
+  quota: 1
+  transport: MyString
+  backupmx: false
+  created: 2014-06-13 10:47:00
+  modified: 2014-06-13 10:47:00
+  active: false

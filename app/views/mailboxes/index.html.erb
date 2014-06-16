@@ -1,0 +1,19 @@
+<h1>
+  Casillas de Dominio <%= @domain %>
+  <%= link_to 'Crear Casilla', new_domain_mailbox_path(@domain), class: "btn btn-primary pull-right" %>
+</h1>
+<hr />
+<%= grid(@mailboxes) do |g|
+  
+  g.column name: "Username", attribute: "username"
+  g.column name: "Nombre", attribute: "name"
+  g.column name: "Activo", attribute: "active"
+  
+  g.column do |c|
+    link_to "<span class='glyphicon glyphicon-pencil'></span>".html_safe, edit_mailbox_path(c)
+  end
+
+  g.column do |c|
+   link_to("<span class='glyphicon glyphicon-remove'></a>".html_safe, c, method: :delete, data: {confirm: "Seguro desea eliminar?"})
+  end
+end -%>

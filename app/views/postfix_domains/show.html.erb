@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Domain:</strong>
+  <%= @postfix_domain.domain %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @postfix_domain.description %>
+</p>
+
+<p>
+  <strong>Aliases:</strong>
+  <%= @postfix_domain.aliases %>
+</p>
+
+<p>
+  <strong>Mailboxes:</strong>
+  <%= @postfix_domain.mailboxes %>
+</p>
+
+<p>
+  <strong>Maxquota:</strong>
+  <%= @postfix_domain.maxquota %>
+</p>
+
+<p>
+  <strong>Quota:</strong>
+  <%= @postfix_domain.quota %>
+</p>
+
+<p>
+  <strong>Transport:</strong>
+  <%= @postfix_domain.transport %>
+</p>
+
+<p>
+  <strong>Backupmx:</strong>
+  <%= @postfix_domain.backupmx %>
+</p>
+
+<p>
+  <strong>Created:</strong>
+  <%= @postfix_domain.created %>
+</p>
+
+<p>
+  <strong>Modified:</strong>
+  <%= @postfix_domain.modified %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @postfix_domain.active %>
+</p>
+
+<%= link_to 'Edit', edit_postfix_domain_path(@postfix_domain) %> |
+<%= link_to 'Back', postfix_domains_path %>

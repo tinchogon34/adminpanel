@@ -1,0 +1,10 @@
+<%= simple_form_for(@domain, html: {class: 'form-horizontal' }, url: (@domain.try(:new_record?) ? new_domain_path : edit_domain_path(@domain))) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+
+  <%= f.input :domain %>
+  <%= f.input :description %>
+  <%= f.input :aliases %>
+  <%= f.input :mailboxes %>
+  <%= f.input :active %>
+  <%= f.button :submit, class: "btn btn-success" %>
+<% end %>

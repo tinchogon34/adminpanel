@@ -1,0 +1,16 @@
+<%= simple_form_for([@domain,@mailbox], html: {class: 'form-horizontal' }, url: (@mailbox.try(:new_record?) ? domain_mailboxes_path(@domain) : mailbox_path(@mailbox))) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+
+  <% if @mailbox.new_record? %>
+  <%= f.input :username %>
+  <% end %>
+  <%= f.input :name %>
+  <% if @mailbox.persisted? %>
+  <%= f.input :old_password, as: :password %>
+  <% end %>
+  <%= f.input :password1, as: :password %>
+  <%= f.input :password1_confirmation, as: :password %>
+  <%= f.input :active %>
+ 
+  <%= f.button :submit, class: "btn btn-success" %>
+<% end %>

@@ -1,0 +1,22 @@
+<h1>
+  Registros de Zona <%= @zone %>
+  <%= link_to 'Crear Registro', new_zone_record_path(@zone), class: "btn btn-primary pull-right" %>
+</h1>
+<hr />
+<%= grid(@records) do |g|
+  
+  g.column name: "Nombre", attribute: "name"
+  g.column name: "Tipo", attribute: "type", custom_filter: :auto
+  g.column name: "Contenido", attribute: "content"
+  g.column name: "TTL", attribute: "ttl"
+  g.column name: "Prioridad", attribute: "prio"
+  g.column name: "Fecha Modif.", attribute: "change_date"
+  
+  g.column do |c|
+    link_to "<span class='glyphicon glyphicon-pencil'></span>".html_safe, edit_record_path(c)
+  end
+
+  g.column do |c|
+   link_to("<span class='glyphicon glyphicon-remove'></a>".html_safe, c, method: :delete, data: {confirm: "Seguro desea eliminar?"})
+  end
+end -%>

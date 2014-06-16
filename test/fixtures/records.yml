@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  domain_id: 
+  name: MyString
+  type: 
+  content: MyString
+  ttl: 1
+  prio: 1
+  change_date: 1
+
+two:
+  domain_id: 
+  name: MyString
+  type: 
+  content: MyString
+  ttl: 1
+  prio: 1
+  change_date: 1
