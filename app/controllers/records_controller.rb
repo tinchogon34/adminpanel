@@ -27,6 +27,7 @@ class RecordsController < ApplicationController
   def create
     @record = Record.new(record_params)
     @record.zone = @zone
+    @record.priority = 0
     @record.change_date = Time.now.to_i
     respond_to do |format|
       if @record.save
