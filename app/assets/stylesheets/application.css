@@ -14,3 +14,13 @@
  *= require_tree .
  *= require_self
  */
+
+ /* Override Bootstrap 3 font locations */
+ @font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('twitter/glyphicons-halflings-regular.eot');
+  src: url('twitter/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), 
+  url('twitter/glyphicons-halflings-regular.woff') format('woff'), 
+  url('twitter/glyphicons-halflings-regular.ttf') format('truetype'), 
+  url('twitter/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+ }
