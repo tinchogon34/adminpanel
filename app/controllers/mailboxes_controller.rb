@@ -5,7 +5,7 @@ class MailboxesController < ApplicationController
   # GET /mailboxes
   # GET /mailboxes.json
   def index
-    @mailboxes = initialize_grid(@domain.mailboxes, enable_export_to_csv: false)
+    @mailboxes = initialize_grid(@domain.mail_boxes, enable_export_to_csv: false)
   end
 
   # GET /mailboxes/1

@@ -1,5 +1,9 @@
-<h1>Nueva Zona</h1>
+<%= provide(:title, "Nueva Zona") %>
+
+<h1>
+  Nueva Zona
+  <%= link_to "Volver", zones_path, class: "btn btn-primary pull-right" %>
+</h1>
+<hr />
 
 <%= render 'form' %>
-
-<%= link_to 'Volver', zones_path %>

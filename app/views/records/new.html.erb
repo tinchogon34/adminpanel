@@ -1,5 +1,9 @@
-<h1>Nuevo registro</h1>
+<%= provide(:title, "Nuevo Registro") %>
+
+<h1>
+  Nuevo Registro
+  <%= link_to "Volver", zone_records_path(@zone), class: "btn btn-primary pull-right" %>
+</h1>
+<hr />
 
 <%= render 'form' %>
-
-<%= link_to 'Volver', zone_records_path(@zone) %>

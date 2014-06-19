@@ -1,5 +1,9 @@
-<h1>Editar casilla</h1>
+<%= provide(:title, "Editar Casilla") %>
+
+<h1>
+  Editar Casilla
+  <%= link_to "Volver", domain_mailboxes_path(@mailbox.domain), class: "btn btn-primary pull-right" %>
+</h1>
+<hr />
 
 <%= render 'form' %>
-
-<%= link_to 'Volver', domain_mailboxes_path(@mailbox.domain) %>

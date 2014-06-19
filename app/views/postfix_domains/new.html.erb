@@ -1,5 +1,9 @@
-<h1>Nuevo dominio</h1>
+<%= provide(:title, "Nuevo Dominio") %>
+
+<h1>
+  Nuevo Dominio
+  <%= link_to "Volver", domains_path, class: "btn btn-primary pull-right" %>
+</h1>
+<hr />
 
 <%= render 'form' %>
-
-<%= link_to 'Volver', domains_path %>

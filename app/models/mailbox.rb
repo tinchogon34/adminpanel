@@ -16,7 +16,7 @@ class Mailbox < ActiveRecord::Base
   validate :check_old_password, on: :update, if: Proc.new { !self.password1.empty? }
   validates :password1, :password1_confirmation, presence: true, on: :create
   validates :password1, :password1_confirmation, presence: true, on: :update, if: Proc.new { !self.old_password.empty? }
-  validates :password1, confirmation: true  
+  validates :password1, confirmation: true
 
   private
 

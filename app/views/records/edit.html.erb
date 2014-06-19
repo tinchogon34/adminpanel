@@ -1,5 +1,9 @@
-<h1>Editar registro</h1>
+<%= provide(:title, "Editar Registro") %>
+
+<h1>
+  Editar Registro
+  <%= link_to "Volver", zone_records_path(@record.zone), class: "btn btn-primary pull-right" %>
+</h1>
+<hr />
 
 <%= render 'form' %>
-
-<%= link_to 'Volver', zone_records_path(@record.zone) %>

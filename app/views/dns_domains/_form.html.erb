@@ -1,4 +1,4 @@
-<%= simple_form_for(@zone, html: {class: 'form-horizontal' }, url: (@zone.try(:new_record?) ? new_zone_path : edit_zone_path(@zone))) do |f| %>
+<%= simple_form_for(@zone, html: {class: 'form-horizontal' }, url: (@zone.try(:new_record?) ? new_zone_path : edit_zone_path(@zone)), defaults: { input_html: {class: 'form-control'}}) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
 
   <%= f.input :name %>
