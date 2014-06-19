@@ -2,6 +2,35 @@ es:
   attributes:
     created_at: "Creado"
     updated_at: "Actualizado"
+    name: "Nombre"
+    master: "Maestro"
+    type: "Tipo"
+    content: "Contenido"
+    ttl: "TTL"
+    prio: "Prioridad"
+    active: "Habilitado"
+    domain: "Dominio"
+    description: "Descripción"
+    aliases: "Alias"
+    mailboxes: "Casillas"
+    username: "Nombre de Usuario"
+    old_password: "Password anterior"
+    password1: "Password"
+    password1_confirmation: "Confirmación de Password"
+    remember_me: "Recordarme"
+
 
   activerecord:
     models:
+      dns_domain:
+        one: 'Zona'
+        other: 'Zonas'
+      mailbox:
+        one: 'Casilla'
+        other: 'Casillas'
+      postfix_domain:
+        one: 'Dominio'
+        other: 'Dominios'
+      record:
+        one: 'Registro'
+        other: 'Registros'

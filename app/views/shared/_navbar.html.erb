@@ -1,0 +1,29 @@
+<nav>
+  <ul class="list-unstyled main-menu">
+    <li class="text-right">
+      <a href="#" id="nav-close">X</a>
+    </li>
+    <li>
+      <a href="/"><i class="fa fa-home fa-lg white"></i>
+        Principal
+        <span class="icon"></span>
+      </a>
+    </li>
+    <li>
+      <%= link_to "<i class='fa fa-sign-out fa-lg white'></i> Salir".html_safe, destroy_admin_session_path, method: :delete %>
+    </li>
+  </ul>
+</nav>
+
+<div class="navbar navbar-inverse navbar-fixed-top"> 
+  <div class="col-xs-12">     
+    <a class="navbar-brand" href="/">Adminpanel</a>
+    <% if signed_in? %>
+      <div class="navbar-header pull-right">
+        <a id="nav-expander" class="nav-expander fixed">
+          MENU &nbsp;<i class="fa fa-bars fa-lg white"></i>
+        </a>
+      </div>
+    <% end %>
+  </div>
+</div>

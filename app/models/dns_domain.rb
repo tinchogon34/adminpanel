@@ -12,7 +12,7 @@ class DnsDomain < ActiveRecord::Base
   validates :master, presence: true, if: Proc.new { type == 'SLAVE' }
   validates :name, uniqueness: true
 
-  DNS_TYPES = %w(MASTER SLAVE)
+  DNS_TYPES = %w(MASTER SLAVE NATIVE)
 
   def to_s
     self.name

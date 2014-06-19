@@ -13,6 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require wice_grid
 //= require twitter/bootstrap.min
-//= require_tree .
+//= require cocoon
+//= require wice_grid
+//= require common
+//= require coding_ways/ajax_events
+//= require slider/slider

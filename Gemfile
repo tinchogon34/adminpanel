@@ -13,3 +13,5 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'simple_form'
 gem 'wice_grid'
+gem 'devise'
+gem 'cocoon'

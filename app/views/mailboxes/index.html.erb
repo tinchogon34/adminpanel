@@ -7,7 +7,9 @@
   
   g.column name: "Username", attribute: "username"
   g.column name: "Nombre", attribute: "name"
-  g.column name: "Activo", attribute: "active"
+  g.column name: "Activo", attribute: "active" do |m|
+    m.active ? 'Si' : 'No'
+  end
   
   g.column do |c|
     link_to "<span class='glyphicon glyphicon-pencil'></span>".html_safe, edit_mailbox_path(c)

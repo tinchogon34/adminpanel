@@ -9,7 +9,9 @@
   g.column name: "Descripción", attribute: "description"
   g.column name: "Alias", attribute: "aliases"
   g.column name: "Casillas", attribute: "mailboxes"
-  g.column name: "Activo", attribute: "active"
+  g.column name: "Activo", attribute: "active" do |d|
+    d.active ? 'Si' : 'No'
+  end
   
   g.column do |c|
     link_to 'Ver Casillas', domain_mailboxes_path(c), class: 'btn btn-primary'
