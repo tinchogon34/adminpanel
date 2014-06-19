@@ -4,8 +4,15 @@
       <a href="#" id="nav-close">X</a>
     </li>
     <li>
-      <a href="/"><i class="fa fa-home fa-lg white"></i>
-        Principal
+      <a href="/zones"><i class="fa fa-globe fa-lg white"></i>
+        Zonas
+        <span class="icon"></span>
+      </a>
+      
+    </li>
+    <li>
+      <a href="/domains"><i class="fa fa-envelope fa-lg white"></i>
+        Dominios
         <span class="icon"></span>
       </a>
     </li>
@@ -19,11 +26,11 @@
   <div class="col-xs-12">     
     <a class="navbar-brand" href="/">Adminpanel</a>
     <% if signed_in? %>
-      <div class="navbar-header pull-right">
-        <a id="nav-expander" class="nav-expander fixed">
-          MENU &nbsp;<i class="fa fa-bars fa-lg white"></i>
-        </a>
-      </div>
+    <div class="navbar-header pull-right">
+      <a id="nav-expander" class="nav-expander fixed">
+        MENU &nbsp;<i class="fa fa-bars fa-lg white"></i>
+      </a>
+    </div>
     <% end %>
   </div>
 </div>

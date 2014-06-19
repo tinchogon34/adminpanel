@@ -9,7 +9,7 @@ class Mailbox < ActiveRecord::Base
   establish_connection "#{Rails.env}_postfix".to_sym
 
   belongs_to :domain, class_name: 'PostfixDomain', foreign_key: 'domain'
-  has_many :aliases, class_name: 'Alias', foreign_key: 'goto', dependent: :destroy
+  has_many :aliases, class_name: 'Alias', foreign_key: 'goto', dependent: :delete_all
 
   attr_accessor :old_password, :password1, :password1_confirmation
 

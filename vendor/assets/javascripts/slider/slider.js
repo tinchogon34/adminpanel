@@ -1,4 +1,4 @@
-$(document).ready(function(){                        
+$(document).on('ready page:load',function(){                        
 
   $('#nav-expander').on('click',function(e){
     e.preventDefault();

@@ -69,6 +69,6 @@ class PostfixDomainsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def domain_params
-      params.require(:domain).permit(:domain, :description, :aliases, :mailboxes, :active)
+      params.require(:postfix_domain).permit(:domain, :description, :aliases, :mailboxes, :active)
     end
 end

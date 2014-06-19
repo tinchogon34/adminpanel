@@ -69,6 +69,6 @@ class DnsDomainsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def zone_params
-      params.require(:zone).permit(:name, :master, :last_check, :type, :notified_serial, :account)
+      params.require(:dns_domain).permit(:name, :master, :type)
     end
 end

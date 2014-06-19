@@ -1,4 +1,4 @@
-<%= simple_form_for(@domain, html: {class: 'form-horizontal' }, url: (@domain.try(:new_record?) ? new_domain_path : edit_domain_path(@domain))) do |f| %>
+<%= simple_form_for(@domain, html: {class: 'form-horizontal' }, url: (@domain.try(:new_record?) ? domains_path : edit_domain_path(@domain))) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
 
   <%= f.input :domain, input_html: {class: 'form-control'} %>
