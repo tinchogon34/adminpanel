@@ -4,6 +4,9 @@ class PostfixDomain < ActiveRecord::Base
 
   has_many :mail_boxes, class_name: 'Mailbox', foreign_key: 'domain', dependent: :delete_all
 
+  validates :domain, presence: true, uniqueness: true
+  validates :aliases, :mailboxes, presence: true, numericality: true
+
   def to_s
     self.domain
   end
