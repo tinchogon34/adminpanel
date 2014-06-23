@@ -45,3 +45,10 @@ input[type="text"], input[type="email"], input[type="password"], input[type="num
 #error_explanation {
   display: none;
 }
+
+#nav-expander {
+  text-decoration: none;
+  &:hover{
+    color: #ccc;
+  }
+}

@@ -4,7 +4,7 @@ class PostfixDomainsController < ApplicationController
   # GET /domains
   # GET /domains.json
   def index
-    @domains = initialize_grid(PostfixDomain, enable_export_to_csv: false)
+    @domains = initialize_grid(PostfixDomain.where.not(domain: "ALL"), enable_export_to_csv: false)
   end
 
   # GET /domains/1
