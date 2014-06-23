@@ -42,7 +42,7 @@ class DnsDomainsController < ApplicationController
   def update
     respond_to do |format|
       if @zone.update(zone_params)
-        format.html { redirect_to zones_url, notice: 'Zona editada exitosamente.' }
+        format.html { redirect_to zones_url, notice: 'Zona actualizada exitosamente.' }
         format.json { render :show, status: :ok, location: @zone }
       else
         format.html { render :edit }

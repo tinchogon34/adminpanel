@@ -30,7 +30,7 @@ class RecordsController < ApplicationController
     @record.change_date = Time.now.to_i
     respond_to do |format|
       if @record.save
-        format.html { redirect_to zone_records_path(@record.zone), notice: 'Record was successfully created.' }
+        format.html { redirect_to zone_records_path(@record.zone), notice: 'Registro creado exitosamente.' }
         format.json { render :show, status: :created, location: @record }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class RecordsController < ApplicationController
     @record.change_date = Time.now.to_i
     respond_to do |format|
       if @record.update(record_params)
-        format.html { redirect_to zone_records_path(@record.zone), notice: 'Record was successfully updated.' }
+        format.html { redirect_to zone_records_path(@record.zone), notice: 'Registro actualizado exitosamente.' }
         format.json { render :show, status: :ok, location: @record }
       else
         format.html { render :edit }
@@ -60,7 +60,7 @@ class RecordsController < ApplicationController
     zone_id = @record.zone.id
     @record.destroy
     respond_to do |format|
-      format.html { redirect_to zone_records_path(zone_id), notice: 'Record was successfully destroyed.' }
+      format.html { redirect_to zone_records_path(zone_id), notice: 'Registro eliminado exitosamente.' }
       format.json { head :no_content }
     end
   end

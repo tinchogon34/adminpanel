@@ -32,7 +32,7 @@ class MailboxesController < ApplicationController
 
     respond_to do |format|
       if @mailbox.save
-        format.html { redirect_to domain_mailboxes_path(@mailbox.domain), notice: 'Mailbox was successfully created.' }
+        format.html { redirect_to domain_mailboxes_path(@mailbox.domain), notice: 'Casilla creada exitosamente.' }
         format.json { render :show, status: :created, location: @mailbox }
       else
         format.html { render :new }
@@ -46,7 +46,7 @@ class MailboxesController < ApplicationController
   def update
     respond_to do |format|
       if @mailbox.update(mailbox_params)
-        format.html { redirect_to domain_mailboxes_path(@mailbox.domain), notice: 'Mailbox was successfully updated.' }
+        format.html { redirect_to domain_mailboxes_path(@mailbox.domain), notice: 'Casilla actualizada exitosamente.' }
         format.json { render :show, status: :ok, location: @mailbox }
       else
         format.html { render :edit }
@@ -61,7 +61,7 @@ class MailboxesController < ApplicationController
     domain_id = @mailbox.domain.id
     @mailbox.destroy
     respond_to do |format|
-      format.html { redirect_to domain_mailboxes_path(domain_id), notice: 'Mailbox was successfully destroyed.' }
+      format.html { redirect_to domain_mailboxes_path(domain_id), notice: 'Casilla eliminada exitosamente.' }
       format.json { head :no_content }
     end
   end

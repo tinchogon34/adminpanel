@@ -13,6 +13,7 @@ class Mailbox < ActiveRecord::Base
 
   attr_accessor :old_password, :password1, :password1_confirmation
 
+  validates :username, uniqueness: true
   validate :check_old_password, on: :update, if: Proc.new { !self.password1.empty? }
   validates :password1, :password1_confirmation, presence: true, on: :create
   validates :password1, :password1_confirmation, presence: true, on: :update, if: Proc.new { !self.old_password.empty? }
