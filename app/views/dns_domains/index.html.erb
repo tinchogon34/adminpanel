@@ -8,7 +8,9 @@
   g.column name: "Nombre", attribute: "name"
   g.column name: "Tipo", attribute: "type", custom_filter: :auto
   g.column name: "Maestro", attribute: "master"
-  g.column name: "Ultimo chequeo", attribute: "last_check"
+  g.column name: "Ultimo chequeo", attribute: "last_check" do |c|
+    Time.at(c.last_check).to_datetime.strftime("%d-%m-%Y %H:%M") if c.last_check
+  end
   
   g.column do |c|
     link_to 'Ver registros', zone_records_path(c), class: 'btn btn-primary'
