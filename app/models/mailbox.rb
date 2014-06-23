@@ -2,7 +2,7 @@ class Mailbox < ActiveRecord::Base
   before_create :encrypt_password
   before_update :change_password, if: Proc.new { !self.old_password.empty? }
   before_save :set_fields
-  after_create :create_alias
+  after_create :create_alias, :send_mail
   after_update :update_alias
 
   self.table_name = "mailbox"
@@ -52,5 +52,9 @@ class Mailbox < ActiveRecord::Base
 
   def extract_password_from_crypt(crypted_password)
     crypted_password.split('$').last
+  end
+
+  def send_mail
+    UserMailer.welcome(self.username).deliver 
   end
 end
