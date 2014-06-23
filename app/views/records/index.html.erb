@@ -10,7 +10,9 @@
   g.column name: "Contenido", attribute: "content"
   g.column name: "TTL", attribute: "ttl"
   g.column name: "Prioridad", attribute: "prio"
-  g.column name: "Fecha Modif.", attribute: "change_date"
+  g.column name: "Fecha Modif.", attribute: "change_date" do |c|
+    Time.at(c.change_date).to_datetime.strftime("%d-%m-%Y %H:%M") if c.change_date
+  end
   
   g.column do |c|
     link_to "<span class='glyphicon glyphicon-pencil'></span>".html_safe, edit_record_path(c)
